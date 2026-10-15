@@ -1,0 +1,282 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Prata&family=Rufina:wght@400;700&display=swap');
+
+/* ==========================
+   RESET
+   ========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Fontes */
+    --fonte-padrao: "Prata", serif;
+    --font-2: "Outfit", sans-serif;
+    --font-3: "Rufina", serif;
+
+    /* Paleta */
+    --cor-1: #D9A157;   /* dourado (destaques, botões, hover) */
+    --cor-2: #A2773F;   /* marrom médio (header, faixas) */
+    --cor-3: #4A2C1A;   /* marrom escuro (textos, rodapé) */
+    --cor-4: #F2E8D9;   /* creme (fundo do body, inputs) */
+    --cor-5: #F6E7D0;   /* creme claro (texto no header) */
+    --cor-6: #E8C9A0;   /* bege (textos/bordas no rodapé) */
+    --cor-7: #D4A574;   /* bege caramelo (bordas dos inputs) */
+    --cor-8: #BF9F63;   /* dourado oliva (fim do degradê dos cards) */
+    --cor-9: #FFFFFF;   /* branco */
+    --cor-10: #000000;  /* preto (overlay) */
+
+    /* Versões RGB para usar com transparência: rgba(var(--cor-1-rgb), 0.22) */
+    --cor-1-rgb: 217, 161, 87;
+    --cor-2-rgb: 162, 119, 63;
+    --cor-3-rgb: 74, 44, 26;
+    --cor-10-rgb: 0, 0, 0;
+}
+
+
+.rendimento-main {
+    background-color: #E8C9A0;
+    width: 90%;
+    max-width: 1600px;
+    height: 600px;
+    border-radius: 30px;
+    flex-direction: column;
+    margin-left: 90px;
+}
+
+main {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.input-rendimento {
+    width: 100%;
+    max-width: 500px;
+    height: 50px;
+    border-radius: 10px;
+    border:1px solid #D4A574;
+    
+
+}
+.input-rendimento:hover{
+        border: 1.5px solid #a7825c;
+
+    
+}
+.label-rendimento-input{
+    color: #7A4E32;
+    font-style: var(--font-3);
+    font-size: x-large;
+}
+
+.input-main-rendimento{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 30px;
+    width: 100%;
+
+
+}
+.input-label-rendimento {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 50px;
+
+}
+
+
+
+
+.input-rendimento option {
+    padding: 6px 10px;
+    border-radius: 6px;
+    background-color: transparent;
+    color: var(--cor-3);
+}
+
+
+
+.label-rendimento-input{
+    /* mexer com o label dps */
+}
+.section-main{
+    flex-direction: row;
+    display: flex;
+    justify-content: space-around;
+    background-color: #F2E8D9;
+    max-width: 1400px;
+    width: 90%;
+    max-height: 400px;
+    height: 200px;
+    border-radius: 20px;
+    margin: auto;
+    padding: 20px;
+    font-style: var(--font-3);
+    color: #7A4E32;
+    
+}
+.qnt-pecas, .peso-total {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; 
+    gap: 30px;
+}
+
+.text-rendimento{
+    font-size: 5em;
+}
+
+.peso-total p {
+    font-size: 5em;
+}
+.input-label-rendimento p {
+    font-family: var(--font-2);
+}
+
+
+/* Parte responsiva */
+
+
+/*
+   Tablet (fazer a oartir de 1024px)
+*/
+
+@media (max-width: 1024px) {
+
+    .rendimento-main {
+        width: 90%;
+        height: auto;
+        min-height: 600px;
+        padding-bottom: 30px;
+    }
+
+    .input-main-rendimento {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 20px;
+    }
+
+    .input-label-rendimento {
+        width: 100%;
+        max-width: 500px;
+        padding: 20px;
+
+    }
+
+    .input-rendimento {
+        width: 100%;
+    }
+
+    .section-main {
+        width: 90%;
+        height: auto;
+        min-height: 200px;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        
+
+    }
+
+}
+
+
+/* 
+   600px padrão 
+*/
+
+@media (max-width: 600px) {
+
+    main {
+        min-height: 100vh;
+        align-items: flex-start;
+        padding: 30px 0;
+    }
+
+    .rendimento-main {
+        width: 92%;
+        height: auto;
+        min-height: auto;
+        border-radius: 20px;
+        padding-bottom: 25px;
+    }
+
+    .input-main-rendimento {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+        padding: 15px;
+    }
+
+    .input-label-rendimento {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .label-rendimento-input {
+        font-size: large;
+    }
+
+    .input-rendimento {
+        width: 100%;
+        height: 50px;
+    }
+
+    .input-label-rendimento p {
+        font-size: 13px;
+        margin-top: 5px;
+    }
+
+    .section-main {
+        width: 90%;
+        height: auto;
+        max-height: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        padding: 20px;
+        font-size: large;
+        
+    }
+
+    .section-rendimento {
+        width: 100%;
+        text-align: center;
+    }
+
+    .section-rendimento h1 {
+        font-size: 27px;
+    }
+
+    .qnt-pecas,
+    .peso-total {
+        gap: 15px;
+    }
+
+    .text-rendimento {
+        font-size: 3em;
+    }
+
+    .peso-total p {
+        font-size: 2.5em;
+    }
+
+    .img-pao,
+    .img-balanca {
+        width: 45px;
+        height: auto;
+    }
+}
+
+/* 
+    fazer parte do menu button 
+*/

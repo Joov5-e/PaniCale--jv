@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="rendimento.css">
+    <title></title>
+</head>
+
+<body>
+    <button id="btn-menu"><span>☰</span></button>
+    <div class="coluna_lateral escondida">
+        <ul>
+            <li><a href=""><img src="../image/images-header/receita.png" alt=""></a></li>
+            <li><a href=""><img src="../image/images-header/formulacao.png" alt=""></a></li>
+            <li><a href=""><img src="../image/images-header/rendimento.png" alt=""></a></li>
+            <li><a href=""><img src="../image/images-header/precificacao.png" alt=""></a></li>
+            <li><a href=""><img src="../image/images-header/catalogo.png" alt=""></a></li>
+        </ul>
+        <section class="menu-sair menu-sair-coluna">
+            <hr />
+            <a href="#"><img src="../image/images-header/sair.png" alt=""></a>
+        </section>
+    </div>
+    <header class="Dash_lateral " id="sidebar">
+        <article class="logo">
+            <img src="../image/Logo-Pan.png" alt="Logo-Pan">
+            <p>PaniCale</p>
+
+        </article>
+        <hr class="linha-divisora" />
+        <nav class="Dash_menu">
+            <ul>
+                <li><a href="#"><img src="../image/images-header/receita.png" alt=""><span>Receita</span></a></li>
+                <li><a href="#"><img src="../image/images-header/formulacao.png" alt=""><span>Formulação da
+                            massa</span></a></li>
+                <li><a href="#"><img src="../image/images-header/rendimento.png" alt=""><span>Rendimento</span></a></li>
+                <li><a href="#"><img src="../image/images-header/precificacao.png" alt=""><span>Precificação</span></a>
+                </li>
+                <li><a href="catalogo/catalogo.html"><img src="../image/images-header/catalogo.png"
+                            alt=""><span>Catálogo</span></a></li>
+            </ul>
+        </nav>
+        <section class="menu-sair">
+            <hr />
+            <a href="#"><img src="../image/images-header/sair.png" alt=""><span>Sair</span></a>
+        </section>
+    </header>
+    <div class="overlay-menu" id="overlay"></div>
+    <main>
+        <div class="rendimento-main">
+
+            <div class="input-main-rendimento">
+
+                <div class="input-label-rendimento">
+
+                    <label class="label-rendimento-input" for="peso-cru">
+                        PESO CRU DA PEÇA (g)
+                    </label>
+
+                    <select id="peso-cru" class="input-rendimento">
+                        <option class="opcoes" value="50">50g</option>
+                        <option class="opcoes" value="75">75g</option>
+                    </select>
+
+                    <p>Peso da peça antes de assar</p>
+                </div>
+
+                <div class="input-label-rendimento">
+                    <label class="label-rendimento-input" for="peso-assado">
+                        PESO ASSADO DA PEÇA (g)
+                    </label>
+
+                    <select id="peso-assado" class="input-rendimento">
+                        <option value="40">40g</option>
+                        <option value="60">60g</option>
+                    </select>
+
+                    <p>Peso da peça depois de assar</p>
+                </div>
+
+                <div class="input-label-rendimento">
+                    <label class="label-rendimento-input" for="peso-assamento">
+                        PESO POR ASSAMENTO %
+                    </label>
+
+                    <select id="peso-assamento" class="input-rendimento">
+                        <option class="teste" value="10">10%</option>
+                        <option value="15">15%</option>
+                        <option value="20">20%</option>
+                    </select>
+
+                    <p>Perda média de peso ao assar</p>
+                </div>
+
+            </div>
+            <div class="section-main">
+                <section class="section-rendimento">
+                    <h1>Quantidade de Peças</h1>
+                    <div class="qnt-pecas">
+                        <img class="img-pao" src="/image/pao-rendimento.png" alt="img-de-pao">
+                        <h1 class="text-rendimento">132</h1>
+                        <p>UNIDADES</p>
+                    </div>
+                </section>
+                <section class="section-rendimento">
+                    <h1>Peso Assado Total </h1>
+                    <div class="peso-total">
+                        <img class="img-balanca" src="/image/balança-rendimento.png" alt="img-balança">
+                        <h1 class="text-rendimento">14,940</h1>
+                        <p id="mdd" class="mdd">kg</p>
+                        <!-- mudar o valor dps no js se precisar -->
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        </div>
+    </main>
+    <script src="../scripts/script.js" defer></script>
+    <script>
+        
+        const medida = document.getElementById('mdd')
+        const mdd = medida.innerText.trim()
+
+        if (mdd === "kg") medida.innerText = "g"
+        if (mdd === "g") medida.innerText = "kg"
+
+    </script>
+</body>
+
+</html>
